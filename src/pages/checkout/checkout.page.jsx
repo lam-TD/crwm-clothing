@@ -9,7 +9,6 @@ import {
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
 import "./checkout.styles.scss";
-import { clearItemFromCart } from "../../redux/cart/cart.actions";
 
 const CheckoutPage = ({ cartItems, total }) => {
   return (
