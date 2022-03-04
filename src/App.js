@@ -11,7 +11,6 @@ import SignUpPage from "./pages/sign-up/sign-up.page";
 import ShopPage from "./pages/shop/shop.component";
 import CheckoutPage from "./pages/checkout/checkout.page";
 
-
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 
@@ -49,15 +48,14 @@ class App extends React.Component {
         <Header />
         <Routes>
           <Route index path="/" element={<Homepage />} />
-          <Route path="/login" element={<SignInPage />} />
+          <Route path="/signin" element={<SignInPage />} />
           <Route
             extract
             path="/signup"
-            render={() =>
-              this.props.currentUser ? <Navigate to="/" /> : <SignInPage />
+            element={
+              this.props.currentUser ? <Navigate to="/" /> : <SignUpPage />
             }
           />
-          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/home" element={<Homepage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
