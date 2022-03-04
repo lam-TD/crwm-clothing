@@ -59,6 +59,12 @@ const INITIAL_STATE = {
           imageUrl: "https://i.ibb.co/X2VJP2W/blue-snapback.png",
           price: 16,
         },
+        {
+          id: 10,
+          name: "Blue Snapback 2",
+          imageUrl: "https://i.ibb.co/X2VJP2W/blue-snapback.png",
+          price: 16,
+        },
       ],
     },
     {
