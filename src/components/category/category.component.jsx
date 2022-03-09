@@ -1,12 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { CategoryContainer } from "./category.styles";
+
 const CategoryPage = () => {
-    const params = useParams();
-    console.log(params);
+  const params = useParams();
   return (
-    <div className="category-page">
+    <CategoryContainer>
       <h2>{params.categoryId}</h2>
-    </div>
+    </CategoryContainer>
   );
 };
 
