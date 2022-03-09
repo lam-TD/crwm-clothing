@@ -5,14 +5,13 @@ import { createStructuredSelector } from "reselect";
 
 import SignIn from "../../components/sign-in/sign-in.component";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
-
-import "./sign-in.styles.scss";
+import { SignInContainer } from "./sign-in.styles";
 
 const SignInPage = ({ currentUser }) => {
   return !currentUser ? (
-    <div className="container">
+    <SignInContainer>
       <SignIn />
-    </div>
+    </SignInContainer>
   ) : (
     <Navigate to="/" />
   );

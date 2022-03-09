@@ -5,12 +5,12 @@
   justify-content: space-between;
   margin-bottom: 25px;
   border-bottom: 1px solid #ddd;
+  position: fixed;
+  z-index: 999;
+  background-color: white;
 
   .logo-container {
-    // height: 100%;
-    // width: 70px;
-    // padding: 25px;
-    width: 50%;
+    width: 70px;
     height: 100%;
     display: flex;
     align-items: center;

@@ -20,7 +20,7 @@ const CartIcon = ({ toggleCartHidden, itemCount }) => {
 //accumulatedQuantity
 // const mapStateToProps = (state) => ({
 //   itemCount: selectCartItemsCount(state),
-// });
+// }); 
 
 const mapStateToProps = createStructuredSelector({
   itemCount: selectCartItemsCount,
