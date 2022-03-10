@@ -11,11 +11,13 @@ import SignUpPage from "./pages/sign-up/sign-up.page";
 import ShopPage from "./pages/shop/shop.component";
 import CheckoutPage from "./pages/checkout/checkout.page";
 
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import { addCollectionAndDocuments, auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 
 import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "./redux/user/user.selectors";
+
+import SHOP_DATA from "./pages/shop/shop.data";
 
 class App extends React.Component {
   unsubcribeFromAuth = null;
@@ -35,6 +37,11 @@ class App extends React.Component {
       }
 
       setCurrentUser(userAuth);
+
+      addCollectionAndDocuments(
+        "collections",
+        SHOP_DATA.map(({ title, items }) => ({ title, items }))
+      );
     });
   }
 
