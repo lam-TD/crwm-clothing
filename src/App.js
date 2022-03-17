@@ -18,6 +18,7 @@ import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
 import SHOP_DATA from "./pages/shop/shop.data";
+import LibraryPage from "./pages/library/library.page";
 
 class App extends React.Component {
   unsubcribeFromAuth = null;
@@ -66,6 +67,7 @@ class App extends React.Component {
           <Route path="/home" element={<Homepage />} />
           <Route path="/shop/*" element={<ShopPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/library" element={<LibraryPage />} />
         </Routes>
       </div>
     );
